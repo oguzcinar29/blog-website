@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 export default function Post({ id, url, title, user_text }) {
   console.log(user_text);
+  console.log(url);
   return (
     <>
       {id % 2 === 1 && (
