@@ -110,18 +110,18 @@ app.post("/api/login", async (req, res) => {
           isLoggFailed = false;
           user_info.id = data[0].id;
           user_info.username = data[0].username;
-          res.redirect("/");
+          res.redirect("https://blog-website-inky-tau.vercel.app");
           isPassFailed = false;
         } else {
           isPassFailed = true;
           isLoggFailed = false;
-          res.redirect("/login");
+          res.redirect("https://blog-website-inky-tau.vercel.app//login");
         }
       });
     } else {
       isPassFailed = false;
       isLoggFailed = true;
-      res.redirect("/login");
+      res.redirect("https://blog-website-inky-tau.vercel.app//login");
     }
   } catch (err) {
     console.log(err);
