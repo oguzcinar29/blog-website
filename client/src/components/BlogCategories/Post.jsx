@@ -8,7 +8,7 @@ export default function Post({ id, url, title, user_text }) {
       {id % 2 === 1 && (
         <div className="box">
           <div className="left">
-            <img src={url} />
+            <img src={`/uploads/${url}`} />
           </div>
           <div className="right">
             <h1>{title}</h1>

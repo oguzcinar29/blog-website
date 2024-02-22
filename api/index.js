@@ -46,6 +46,7 @@ const db = new pg.Client({
     rejectUnauthorized: false,
   },
 });
+
 db.connect()
   .then(() => console.log("connected to database"))
   .catch((err) => console.error(err));
