@@ -11,6 +11,7 @@ import { dirname } from "path";
 import moment from "moment/moment.js";
 import { log } from "console";
 import dot from "dotenv";
+import cors from "cors";
 dot.config();
 
 const __filename = fileURLToPath(import.meta.url);
@@ -36,7 +37,7 @@ let isPassFailed = false;
 
 app.use(express.static(__dirname + "/public"));
 app.use("/uploads", express.static("uploads"));
-
+app.use(cors());
 const POSTGRES_URL = process.env.POSTGRES_URL;
 
 const db = new pg.Client({
