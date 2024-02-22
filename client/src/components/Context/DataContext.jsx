@@ -28,7 +28,7 @@ export const DataProvider = ({ children }) => {
         setUsername(data.user_info.username);
         setUserId(data.user_info.id);
       });
-    fetch("/api/get-all-post")
+    fetch("https://blog-website-38s4.onrender.com/api/get-all-post")
       .then((response) => response.json())
       .then((data) => {
         setPosts(data);
