@@ -21,7 +21,7 @@ export const DataProvider = ({ children }) => {
   const [isLoggFail, setIsLoggFail] = useState(false);
   const [isPassFail, setIsPassFail] = useState(false);
   useEffect(() => {
-    fetch("/api/all-data")
+    fetch("https://blog-website-38s4.onrender.com/api/all-data")
       .then((response) => response.json())
       .then((data) => {
         setLoggedIn(data.loggedIn);
@@ -33,12 +33,12 @@ export const DataProvider = ({ children }) => {
       .then((data) => {
         setPosts(data);
       });
-    fetch("/api/get-user-info")
+    fetch("https://blog-website-38s4.onrender.com/api/get-user-info")
       .then((response) => response.json())
       .then((data) => {
         setAllUsers(data);
       });
-    fetch("/api/is-logg-true")
+    fetch("https://blog-website-38s4.onrender.com/api/is-logg-true")
       .then((response) => response.json())
       .then((data) => {
         setIsLoggFail(data.isLoggFailed);
