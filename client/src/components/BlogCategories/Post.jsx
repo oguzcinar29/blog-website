@@ -27,7 +27,7 @@ export default function Post({ id, url, title, user_text }) {
             <Link to={`/${id}`}>Read More</Link>
           </div>
           <div className="left">
-            <img src={url} />
+            <img src={`https://blog-website-38s4.onrender.com/${url}`} />
           </div>
         </div>
       )}

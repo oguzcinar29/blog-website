@@ -25,7 +25,10 @@ export default function SinglePost() {
           <div className="first-img-div">
             <img
               className="first-img"
-              src={findPost.length !== 0 && findPost[0].url}
+              src={
+                findPost.length !== 0 &&
+                `https://blog-website-38s4.onrender.com/${findPost[0].url}`
+              }
             />
           </div>
           <div className="user-info">
