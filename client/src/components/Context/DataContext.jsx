@@ -31,7 +31,9 @@ export const DataProvider = ({ children }) => {
     fetch("https://blog-website-38s4.onrender.com/api/get-all-post")
       .then((response) => response.json())
       .then((data) => {
+        console.log("hello");
         setPosts(data);
+        console.log(data);
       });
     fetch("https://blog-website-38s4.onrender.com/api/get-user-info")
       .then((response) => response.json())
