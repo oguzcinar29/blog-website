@@ -80,7 +80,7 @@ app.post("/api/register", upload.single("file2"), async (req, res) => {
             "INSERT INTO users(username,email,password,user_img) VALUES ($1,$2,$3,$4)",
             [username, email, data, url]
           );
-          res.redirect("/login");
+          res.redirect("https://blog-website-inky-tau.vercel.app/login");
         });
       } catch (err) {
         console.log(err);
@@ -115,13 +115,13 @@ app.post("/api/login", async (req, res) => {
         } else {
           isPassFailed = true;
           isLoggFailed = false;
-          res.redirect("https://blog-website-inky-tau.vercel.app//login");
+          res.redirect("https://blog-website-inky-tau.vercel.app/login");
         }
       });
     } else {
       isPassFailed = false;
       isLoggFailed = true;
-      res.redirect("https://blog-website-inky-tau.vercel.app//login");
+      res.redirect("https://blog-website-inky-tau.vercel.app/login");
     }
   } catch (err) {
     console.log(err);
@@ -136,7 +136,7 @@ app.post("/api/logged-out", (req, res) => {
   loggedIn = false;
   isPassFailed = false;
   isLoggFailed = false;
-  res.redirect("/");
+  res.redirect("https://blog-website-inky-tau.vercel.app");
 });
 
 // all data here
@@ -185,7 +185,7 @@ app.post("/api/get-user-post", upload.single("file"), async (req, res) => {
         moment().format("MM/DD/YYYY HH:mm:ss"),
       ]
     );
-    res.redirect("/");
+    res.redirect("https://blog-website-inky-tau.vercel.app");
   } catch (err) {
     console.log(err);
   }
@@ -204,7 +204,7 @@ app.post("/api/edit-post", upload.single("file3"), async (req, res) => {
       "UPDATE posts SET title=($1),user_text=($2),category=($3),url=($4),user_id=($5),date_time=($6) WHERE id=($7)",
       [title, text, radioButtonsGroup, url, user_id, date, post_id]
     );
-    res.redirect("/");
+    res.redirect("https://blog-website-inky-tau.vercel.app");
   } catch (err) {
     console.log(err);
   }
@@ -218,7 +218,7 @@ app.post("/api/delete-post", async (req, res) => {
   } catch (err) {
     log(err);
   }
-  res.redirect("/");
+  res.redirect("https://blog-website-inky-tau.vercel.app");
 });
 
 app.listen(port, () => {

@@ -17,7 +17,7 @@ export default function EditPost() {
         <form
           encType="multipart/form-data"
           className="write-form"
-          action="/api/edit-post"
+          action="https://blog-website-38s4.onrender.com/api/edit-post"
           method="post"
         >
           <div className="left">

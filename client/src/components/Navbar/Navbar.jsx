@@ -118,7 +118,10 @@ function Navbar1() {
                     )}
                     {loggedIn && <p id="username">{username}</p>}
                     {loggedIn && (
-                      <form action="/api/logged-out" method="post">
+                      <form
+                        action="https://blog-website-38s4.onrender.com/api/logged-out"
+                        method="post"
+                      >
                         <button
                           style={{ color: "#FFA447" }}
                           id="nav-btn"

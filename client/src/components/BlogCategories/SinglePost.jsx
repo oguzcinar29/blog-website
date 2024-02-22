@@ -60,7 +60,7 @@ export default function SinglePost() {
                 <div className="edit second">
                   <form
                     className="delete-post-form"
-                    action="/api/delete-post"
+                    action="https://blog-website-38s4.onrender.com/api/delete-post"
                     method="post"
                   >
                     <input

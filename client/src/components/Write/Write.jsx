@@ -20,7 +20,7 @@ export default function Write() {
         <form
           enctype="multipart/form-data"
           className="write-form"
-          action="/api/get-user-post"
+          action="https://blog-website-38s4.onrender.com/api/get-user-post"
           method="post"
         >
           <div className="left">
