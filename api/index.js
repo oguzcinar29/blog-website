@@ -144,16 +144,21 @@ app.get("/api/all-data", async (req, res) => {
   res.json({ loggedIn, user_info });
 });
 
-app.get("/api/get-all-post", async (req, res) => {
-  try {
-    const post_result = await db.query("SELECT * FROM posts ORDER BY id DESC");
-    const posts_data = post_result.rows;
+app.get(
+  "https://blog-website-38s4.onrender.com/api/get-all-post",
+  async (req, res) => {
+    try {
+      const post_result = await db.query(
+        "SELECT * FROM posts ORDER BY id DESC"
+      );
+      const posts_data = post_result.rows;
 
-    res.json(posts_data);
-  } catch (err) {
-    console.log(err);
+      res.json(posts_data);
+    } catch (err) {
+      console.log(err);
+    }
   }
-});
+);
 
 app.get("/api/get-user-info", async (req, res) => {
   try {
