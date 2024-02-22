@@ -6,7 +6,7 @@ import session from "express-session";
 import passport from "passport";
 import multer from "multer";
 import { fileURLToPath } from "url";
-import path from "path";
+
 import { dirname } from "path";
 import moment from "moment/moment.js";
 import { log } from "console";
@@ -148,7 +148,7 @@ app.get("/api/get-all-post", async (req, res) => {
   try {
     const post_result = await db.query("SELECT * FROM posts ORDER BY id DESC");
     const posts_data = post_result.rows;
-
+    console.log(posts_data);
     res.json(posts_data);
   } catch (err) {
     console.log(err);
