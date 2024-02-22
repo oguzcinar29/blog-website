@@ -11,7 +11,10 @@ function Login() {
   return (
     <div className="auth-container">
       <div className="auth-box">
-        <form action="/api/login" method="post">
+        <form
+          action="https://blog-website-38s4.onrender.com/api/login"
+          method="post"
+        >
           <h4>Login</h4>
           {isLoggFail && (
             <h5 style={{ color: "red" }}>The email is not found</h5>

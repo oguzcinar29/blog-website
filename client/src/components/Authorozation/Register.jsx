@@ -12,7 +12,7 @@ function Register() {
       <div className="auth-box">
         <form
           encType="multipart/form-data"
-          action="/api/register"
+          action="https://blog-website-38s4.onrender.com/api/register"
           method="post"
         >
           <div className="box2">
